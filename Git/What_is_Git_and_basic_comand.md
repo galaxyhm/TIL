@@ -45,11 +45,12 @@ Git 내에 데이터베이스가 존재하고 그 객체를 구별하기 위해�
 | `git --version` | git의 버전확인                         | `$ git --version`            |
 | `git init`      | 현재 디렉토리를  git repository로 만듬 | `$ git init`                 |
 | `git add`       | 파일을 stage에 올림                    | `$ git add <filename>`       |
-| git commit      | stage에 올라온 파일들을 커밋함 ,       | `$ git commit -m <message> ` |
-| git status      | git의 현재상태를 표시함                | `$ git status`               |
-| git add .       | 현재 디렉토리의 파일들을 stage에 올림  | `$ git add . `               |
-
-
+| `git commit`      | stage에 올라온 파일들을 커밋함 ,       | `$ git commit -m <message> ` |
+| `git status`      | git의 현재상태를 표시함                | `$ git status`               |
+| `git add .`       | 현재 디렉토리의 파일들을 stage에 올림  | `$ git add . `               |
+|`git remote add`| |`$ git remote add`
+|`git pull` | ss|  
+|`git clone` |remote |
 
 ### 
 
