@@ -48,11 +48,15 @@ Git 내에 데이터베이스가 존재하고 그 객체를 구별하기 위해�
 | `git commit`      | stage에 올라온 파일들을 커밋함 ,       | `$ git commit -m <message> ` |
 | `git status`      | git의 현재상태를 표시함                | `$ git status`               |
 | `git add .`       | 현재 디렉토리의 파일들을 stage에 올림  | `$ git add . `               |
-|`git remote add`| |`$ git remote add`
-|`git pull` | ss|  
-|`git clone` |remote |
+|`git remote add`| 원격 디렉토리를 추가함|`$ git remote add <name> <location address>`
+|`git pull` | 원격 디렉토리에서 가져옴|`$ git pull <location name> <branch>`  
+|`git clone` |원격 디렉토리에서 그대로 갱신함 |`$ git clone <location name> `
+|`git remote -v`|현재 원격 디렉토리를 표기|`git remote -v`
 
-### 
+### Recommendations
+
+1. 커밋은 짧지만 내용은 자세하게
+2. README.md, .gitignore를 추가함
 
 
 
