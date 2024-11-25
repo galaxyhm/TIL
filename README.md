@@ -6,7 +6,7 @@ After starting my career, I couldn't keep up with my TIL updates for about a yea
 
 ## Topics
 
-- [Kubernetes (K8s)](./K8s/)
+- [Kubernetes (K8s)](./Kubernetes/)
 
 ## 🎯 Goals
 - Deepen my Kubernetes knowledge through continuous learning and hands-on practice.
