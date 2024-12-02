@@ -19,9 +19,22 @@ UserVo:
     email: str
 
 ```
+### Datamodel(DAO)
+A Data Access Object(DAO) is a design pattern that provides an interface to interact with a database.
+```python
+from sqlmodel import SQLModel, Field
+
+class UserDAO(SQLModel, table=True):
+    id: str = Field(default=None, primary_key =True)
+    password: str
+    email:str 
+```
 ### Repository
+A repository in the Repository pattern is an abstraction layer 
+that mediates between the domain model and the data access layer 
 ```python
 from typing import Protocol
+import UserDAO
 class IUserRepo(Protocol):
     def save(self, user :UserVo):
         pass
@@ -31,6 +44,22 @@ class IUserRepo(Protocol):
         pass
     def find_by_id(self,user_id:str):
         pass
+
+
+class DBUserRepo(IUserRepo):
+    def __init__(self, session_maker):
+        self.session_maker = session_maker
+    def save(self, user: UserVo):
+        user = UserDAO(id = UserVo.id, password= UserVo.password, email= UserVo.email)
+        with self.session_maker() as session:
+            try:
+                session.add(user)
+                session.commit(user)
+            except Exception as e:
+                session.rollback()
+                raise e 
+
+
 ```
 ### Service
 ```python
